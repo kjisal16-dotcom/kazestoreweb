@@ -1,13 +1,13 @@
 const WHATSAPP="919946375868";
 const products=[
-{id:1,name:"KAZE Street Runner",category:"Shoes",price:1299,old:1599,discount:"19%",tag:"NEW",meta:"Casual • Men",sizes:["6","7","8","9","10"],colors:["#111","#ddd","#1646ff"],image:"assets/shoe-black.jpg"},
-{id:2,name:"KAZE Everyday Sneaker",category:"Shoes",price:1499,old:1999,discount:"25%",tag:"BEST SELLER",meta:"Sneaker • Men",sizes:["6","7","8","9","10","11"],colors:["#fff","#111","#8791a0"],image:"assets/shoe-white.jpg"},
-{id:3,name:"KAZE Classic Runner",category:"Shoes",price:1199,old:1399,discount:"14%",tag:"NEW",meta:"Casual • Men",sizes:["6","7","8","9","10"],colors:["#111","#d22","#ddd"],image:"assets/shoe-runner.jpg"},
-{id:4,name:"KAZE Urban Trainer",category:"Shoes",price:1699,old:1999,discount:"15%",tag:"POPULAR",meta:"Sports • Men",sizes:["7","8","9","10","11"],colors:["#111","#fff"],image:"assets/shoe-black.jpg"},
-{id:5,name:"KAZE Minimal Watch",category:"Watches",price:999,old:1299,discount:"23%",tag:"",meta:"Everyday • One Size",sizes:["One Size"],colors:["#111","#1646ff"],image:"assets/watch-blue.jpg"},
-{id:6,name:"KAZE Classic Watch",category:"Watches",price:1299,old:1599,discount:"19%",tag:"",meta:"Classic • One Size",sizes:["One Size"],colors:["#111","#ddd"],image:"assets/watch-blue.jpg"},
-{id:7,name:"KAZE Essential Wallet",category:"Others",price:499,old:699,discount:"29%",tag:"",meta:"Accessory • One Size",sizes:["One Size"],colors:["#111"],image:"assets/category-other.jpg"},
-{id:8,name:"KAZE Sunglasses",category:"Others",price:699,old:899,discount:"22%",tag:"",meta:"Accessory • One Size",sizes:["One Size"],colors:["#111","#555"],image:"assets/category-other.jpg"}
+{id:1,name:"KAZE Street Runner",category:"Shoes",price:1299,old:1599,discount:"19%",tag:"NEW",meta:"Casual • Men",sizes:["6","7","8","9","10"],colors:["#111","#ddd","#1646ff"],image:"assets/shoe-black.svg"},
+{id:2,name:"KAZE Everyday Sneaker",category:"Shoes",price:1499,old:1999,discount:"25%",tag:"BEST SELLER",meta:"Sneaker • Men",sizes:["6","7","8","9","10","11"],colors:["#fff","#111","#8791a0"],image:"assets/shoe-white.svg"},
+{id:3,name:"KAZE Classic Runner",category:"Shoes",price:1199,old:1399,discount:"14%",tag:"NEW",meta:"Casual • Men",sizes:["6","7","8","9","10"],colors:["#111","#d22","#ddd"],image:"assets/shoe-runner.svg"},
+{id:4,name:"KAZE Urban Trainer",category:"Shoes",price:1699,old:1999,discount:"15%",tag:"POPULAR",meta:"Sports • Men",sizes:["7","8","9","10","11"],colors:["#111","#fff"],image:"assets/shoe-black.svg"},
+{id:5,name:"KAZE Minimal Watch",category:"Watches",price:999,old:1299,discount:"23%",tag:"",meta:"Everyday • One Size",sizes:["One Size"],colors:["#111","#1646ff"],image:"assets/watch-blue.svg"},
+{id:6,name:"KAZE Classic Watch",category:"Watches",price:1299,old:1599,discount:"19%",tag:"",meta:"Classic • One Size",sizes:["One Size"],colors:["#111","#ddd"],image:"assets/watch-blue.svg"},
+{id:7,name:"KAZE Essential Wallet",category:"Others",price:499,old:699,discount:"29%",tag:"",meta:"Accessory • One Size",sizes:["One Size"],colors:["#111"],image:"assets/wallet.svg"},
+{id:8,name:"KAZE Sunglasses",category:"Others",price:699,old:899,discount:"22%",tag:"",meta:"Accessory • One Size",sizes:["One Size"],colors:["#111","#555"],image:"assets/wallet.svg"}
 ];
 let cart=JSON.parse(localStorage.getItem("kazeCartV3")||"[]");
 let filter="all", query="", heroIndex=0;
@@ -122,9 +122,9 @@ const revealObserver=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersec
 document.querySelectorAll(".reveal").forEach(x=>revealObserver.observe(x));
 
 const heroSlides=[
- {title:"STEP UP<br>YOUR <em>STYLE</em>",text:"Premium shoes, stylish watches and more — curated for everyday confidence.",img:"assets/hero-shoes.jpg"},
- {title:"FRESH<br><em>ARRIVALS</em>",text:"New everyday styles are waiting for you.",img:"assets/shoe-white.jpg"},
- {title:"TIMELESS<br><em>DETAILS</em>",text:"Finish every fit with a clean KAZE watch.",img:"assets/watch-blue.jpg"}
+ {title:"STEP UP<br>YOUR <em>STYLE</em>",text:"Premium shoes, stylish watches and more — curated for everyday confidence.",img:"assets/hero-shoes.svg"},
+ {title:"FRESH<br><em>ARRIVALS</em>",text:"New everyday styles are waiting for you.",img:"assets/shoe-white.svg"},
+ {title:"TIMELESS<br><em>DETAILS</em>",text:"Finish every fit with a clean KAZE watch.",img:"assets/watch-blue.svg"}
 ];
 function showHero(i){
  heroIndex=(i+heroSlides.length)%heroSlides.length;const s=heroSlides[heroIndex];
